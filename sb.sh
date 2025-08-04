@@ -454,30 +454,11 @@ cat > /etc/s-box/sb10.json <<EOF
       }
     },
 {
-        "type": "vmess",
-        "sniff": true,
-        "sniff_override_destination": true,
-        "tag": "vmess-sb",
+        "type": "socks",
+        "tag": "socks-sb",
         "listen": "::",
         "listen_port": ${port_vm_ws},
-        "users": [
-            {
-                "uuid": "${uuid}",
-                "alterId": 0
-            }
-        ],
-        "transport": {
-            "type": "ws",
-            "path": "${uuid}-vm",
-            "max_early_data":2048,
-            "early_data_header_name": "Sec-WebSocket-Protocol"    
-        },
-        "tls":{
-                "enabled": ${tlsyn},
-                "server_name": "${ym_vm_ws}",
-                "certificate_path": "$certificatec_vmess_ws",
-                "key_path": "$certificatep_vmess_ws"
-            }
+	"udp_over_tcp": true,
     }, 
     {
         "type": "hysteria2",
@@ -698,30 +679,11 @@ cat > /etc/s-box/sb11.json <<EOF
       }
     },
 {
-        "type": "vmess",
-
- 
-        "tag": "vmess-sb",
+        "type": "socks",
+        "tag": "socks-sb",
         "listen": "::",
         "listen_port": ${port_vm_ws},
-        "users": [
-            {
-                "uuid": "${uuid}",
-                "alterId": 0
-            }
-        ],
-        "transport": {
-            "type": "ws",
-            "path": "${uuid}-vm",
-            "max_early_data":2048,
-            "early_data_header_name": "Sec-WebSocket-Protocol"    
-        },
-        "tls":{
-                "enabled": ${tlsyn},
-                "server_name": "${ym_vm_ws}",
-                "certificate_path": "$certificatec_vmess_ws",
-                "key_path": "$certificatep_vmess_ws"
-            }
+	"udp_over_tcp": true,
     }, 
     {
         "type": "hysteria2",
