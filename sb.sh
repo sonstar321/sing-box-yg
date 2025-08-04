@@ -458,7 +458,6 @@ cat > /etc/s-box/sb10.json <<EOF
         "tag": "socks-sb",
         "listen": "::",
         "listen_port": ${port_vm_ws},
-	"udp_over_tcp": true,
     }, 
     {
         "type": "hysteria2",
@@ -683,7 +682,6 @@ cat > /etc/s-box/sb11.json <<EOF
         "tag": "socks-sb",
         "listen": "::",
         "listen_port": ${port_vm_ws},
-	"udp_over_tcp": true,
     }, 
     {
         "type": "hysteria2",
