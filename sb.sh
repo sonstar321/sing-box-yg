@@ -455,7 +455,7 @@ cat > /etc/s-box/sb10.json <<EOF
     },
 {
         "type": "socks",
-        "tag": "socks-sb",
+        "tag": "vmess-sb",
         "listen": "::",
         "listen_port": ${port_vm_ws},
     }, 
@@ -679,7 +679,7 @@ cat > /etc/s-box/sb11.json <<EOF
     },
 {
         "type": "socks",
-        "tag": "socks-sb",
+        "tag": "vmess-sb",
         "listen": "::",
         "listen_port": ${port_vm_ws},
     }, 
